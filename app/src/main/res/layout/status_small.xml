@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:gravity="center"
+    android:background="@color/white"
+    android:id="@+id/status_small">
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/leftPod"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:src="@drawable/left_pod"
+            android:id="@+id/leftPodImg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/leftPodImg"
+            android:gravity="center_vertical"
+            
+            android:id="@+id/leftPodText"
+            android:textColor="@color/black"
+            />
+
+        <ProgressBar
+            android:id="@+id/leftPodUpdating"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/leftPodImg"
+            android:indeterminate="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/leftPod"
+        android:id="@+id/rightPod"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:src="@drawable/right_pod"
+            android:id="@+id/rightPodImg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/rightPodImg"
+            android:gravity="center_vertical"
+            
+            android:id="@+id/rightPodText"
+            android:textColor="@color/black"
+            />
+
+        <ProgressBar
+            android:id="@+id/rightPodUpdating"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/rightPodImg"
+            android:indeterminate="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/rightPod"
+        android:id="@+id/podCase"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pod_case"
+            android:id="@+id/podCaseImg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/podCaseImg"
+            android:gravity="center_vertical"
+            
+            android:id="@+id/podCaseText"
+            android:textColor="@color/black"
+            />
+
+        <ProgressBar
+            android:id="@+id/podCaseUpdating"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/podCaseImg"
+            android:indeterminate="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <CheckBoxPreference-->
+<!--        android:key="batterySaver"-->
+<!--        android:title="@string/batterySaver"-->
+<!--        android:summary="@string/batterySaver_desc"-->
+<!--        android:defaultValue="false"-->
+<!--        />-->
+    <ListPreference
+        android:key="scanMode"
+        android:title="Режим"
+        android:summary="Виберіть режим сканування"
+        android:defaultValue="1"
+        android:entries="@array/entries"
+        android:entryValues="@array/entry_values">
+
+    </ListPreference>
+
+    <CheckBoxPreference
+        android:key="AutoBluetooth"
+        android:title="Auto Bluetooth"
+        android:summary="Автоматично включати та вимикати Bluetooth при запуску та вимкненні сервісу відповідно"
+        android:defaultValue="true"
+        />
+    <Preference
+        android:key="serviceEnable"
+        android:title="Зупинити сервіс"
+        />
+    <Preference
+        android:key="discovery"
+        android:title="Сканувати"
+        />
+    <Preference
+        android:key="statusVersion"
+        android:title="Купити Pro"
+        />
+    <EditTextPreference
+        android:key="nameDevice"
+        android:title="AirPods"
+        android:summary="Змініть імя наушників">
+    </EditTextPreference>
+    <Preference
+        android:key="connectStartPlayer"
+        android:title="Обрати плеєр"
+        />
+<!--    <Preference-->
+<!--        android:key="simulationMode"-->
+<!--        android:title="Включити симуляцію"-->
+<!--        />-->
+</PreferenceScreen>

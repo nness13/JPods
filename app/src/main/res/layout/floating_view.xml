@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#4F09091A"
+  android:gravity="bottom"
+  tools:ignore="Overdraw">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="420dp"
+      >
+    <RelativeLayout
+        android:id="@+id/pop_up_window"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="12dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:background="@drawable/shadow"
+        >
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:gravity="start"
+          >
+
+        <TextView android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#7c7c7c"
+            android:gravity="center"
+            android:text="AirPods"
+            android:textSize="32dp"
+            />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/frame"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:layout_below="@id/title"
+            />
+
+
+        <View android:id="@+id/strut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rel1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/frame"
+            android:layout_alignRight="@id/strut"
+            android:layout_alignParentLeft="true">
+
+          <RelativeLayout
+              android:id="@+id/batteryWrap"
+              android:layout_width="match_parent"
+              android:layout_height="20dp"
+              >
+
+            <ImageView
+                android:id="@+id/chargeL"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:padding="4dp"
+                android:src="@drawable/flash_sharp" />
+
+            <ProgressBar
+                android:id="@+id/batteryPods"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="25dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/chargeL"
+                android:progress="50"
+                android:progressDrawable="@drawable/battery"
+                android:progressTint="#3cb556" />
+
+            <ProgressBar
+                android:id="@+id/batteryPods2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="25dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/batteryPods"
+                android:progress="50"
+                android:progressDrawable="@drawable/battery"
+                android:progressTint="#3cb556" />
+
+            <ImageView
+                android:id="@+id/chargeR"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toEndOf="@+id/batteryPods2"
+                android:padding="4dp"
+                android:src="@drawable/flash_sharp" />
+          </RelativeLayout>
+
+          <TextView
+              android:id="@+id/podsText"
+              android:layout_width="25dp"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/batteryWrap"
+              android:layout_marginStart="30dp"
+              android:text="100"
+              android:textColor="#7c7c7c"
+              />
+          <TextView
+              android:id="@+id/podsText2"
+              android:layout_width="25dp"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/batteryWrap"
+              android:layout_marginStart="10dp"
+
+              android:layout_toEndOf="@+id/podsText"
+              android:text="100"
+              android:textColor="#7c7c7c"
+              />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/frame"
+            android:layout_alignLeft="@id/strut"
+            android:layout_alignParentRight="true"
+            android:text="Right"
+            android:layout_marginLeft="30dp"
+            >
+
+          <RelativeLayout
+              android:id="@+id/batteryCaseWrap"
+              android:layout_width="match_parent"
+              android:layout_height="20dp"
+              android:gravity="center"
+              >
+
+            <ProgressBar
+                android:id="@+id/batteryCase"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="25dp"
+                android:layout_height="10dp"
+                android:progressTint="#3cb556"
+                android:progress="50"
+                android:progressDrawable="@drawable/battery"
+                />
+          </RelativeLayout>
+
+
+
+          <TextView
+              android:id="@+id/caseText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/batteryCaseWrap"
+              android:gravity="center"
+              android:text="100"
+              android:textColor="#7c7c7c"
+              />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/rel2"
+            android:background="@drawable/button"
+            android:textColor="#7c7c7c"
+            android:text="Готово"
+            />
+
+      </RelativeLayout>
+
+      <ImageView
+          android:id="@+id/close_btn"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginRight="7dp"
+          android:layout_marginTop="10dp"
+          android:padding="5px"
+          android:src="@drawable/x"
+          android:background="@drawable/silver_circle"
+          />
+
+    </RelativeLayout>
+  </RelativeLayout>
+
+
+</RelativeLayout>
